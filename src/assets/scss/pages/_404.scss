@@ -1,0 +1,22 @@
+.app-nomatch{
+    width: 100%;
+    height: 100vh;
+    background-color: $primary-color;
+    @include flex(center, center);
+    .content{
+        text-align: center;
+        h2{
+            @include font-family($font-main, 11.25em, #0077e2, 400, 0.62em);
+            span{
+                display: block;
+                // font-weight: 300;
+                font-size: 0.14444444444444443em;
+                color: white;
+            }
+        }
+        a{
+            display: block;
+            margin-top: 2rem;
+        }
+    }
+}

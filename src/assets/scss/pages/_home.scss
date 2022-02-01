@@ -1,0 +1,35 @@
+.app-home{
+    .app-content{
+        padding: 3rem 0;
+        @include media-breakpoint-down(sm) { 
+            padding: 1rem 0;
+        }
+        h2{
+            @include font-family($font-main, 3em, black, 700, 1);
+            margin-bottom: 2.5rem;
+        }
+        .home-main-tab{
+            .nav-tabs{
+                .nav-item{
+                    margin-right: 2rem;
+                    .nav-link {
+                        border: 0;
+                        padding: 1rem 0;
+                        margin: 0 !important;
+                        @include font-family($font-main, 1.1em, #979797, 500, 1);
+                        &:hover{
+                            color: black;
+                        }
+                        &.active{
+                            color: black;
+                            border-bottom: 2px solid black;
+                        }
+                        @include media-breakpoint-down(xl) { 
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

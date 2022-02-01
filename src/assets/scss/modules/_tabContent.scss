@@ -1,0 +1,99 @@
+.tab-data{
+    padding: 1.25em 0;
+    h3{
+        @include font-family($font-main, 3em, black, 700, 1);
+        margin-bottom: 0.5rem;
+        @include media-breakpoint-down(xl) { 
+            font-size: 2.5em;
+        }
+    }
+    p{
+        @include media-breakpoint-down(xl) { 
+            font-size: 0.8em;
+        }
+    }
+    // BID DETAILS
+    .bid-details{
+        margin-top: 1rem;
+        .badge{
+            margin-bottom: 0.5rem;
+        }
+        h4{
+            @include font-family($font-main, 2.2em, black, 600, 1); 
+            @include flex(center, normal);
+            .icon{
+                margin-right: 1rem;
+            }
+            @include media-breakpoint-down(xl) { 
+                font-size: 1.8em;
+                .icon{
+                    width: 9px;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+        p{
+            @include font-family($font-main, 1em, #979797, 400, 1); 
+            margin-bottom: 2rem;
+            @include media-breakpoint-down(xl) { 
+                margin-bottom: 1rem;
+            }
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            margin-bottom: 1.9rem;
+            @include flex(center, auto);
+            li{
+                @include font-family($font-main, 2.2em, black, 600, 1); 
+                padding: 0 1rem;
+                span{
+                    display: block;
+                    margin-top: 0.5rem;
+                    @include font-family($font-main, 0.5em, #979797, 400, 1); 
+                }
+                @include media-breakpoint-down(xl) { 
+                    font-size: 1.8em;
+                }
+            }
+        }
+        .btn{
+            display: block;
+            &.btn-primary{
+                @include media-breakpoint-down(xl) { 
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    //SUB TAB
+    .home-sub-tab{
+        padding: 1rem 0;
+        margin-top: 2rem;
+        min-height: 386px;
+        border: 1px solid #F2F2F2;
+        .nav-tabs{
+            padding: 0 1rem;
+            .nav-item{
+                margin: 0 !important;
+                padding: 0 1rem;
+                .nav-link{
+                    @include media-breakpoint-down(xl) { 
+                        font-size: 0.8em !important;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            padding: 1rem;
+            padding-right: 0;
+            .scrollbar-container {
+                padding-right: 2rem;
+            }
+        }
+    }
+}

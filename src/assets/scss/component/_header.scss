@@ -1,0 +1,115 @@
+.header{
+    width: 100%;
+    .navbar-nav {
+        @include flex(center, center);
+        @include media-breakpoint-down(lg) { 
+            flex-direction: row;
+            margin-top: 1rem;
+        }
+        .navbar-brand{
+            position: relative;
+            @include flex(start, normal);
+            .badge{
+                margin-left: 0.5rem;
+                padding: 5px 6px 3px 6px;
+            }
+        }
+        &.form-wrap{
+            width: 100%;
+            align-items: center;
+            form{
+                width: 100%;
+                margin: 0 1rem;
+                position: relative;
+                @include media-breakpoint-down(lg) { 
+                    margin: 0;
+                }
+                .form-control{
+                    height: 48px;
+                    padding: 1rem;
+                    padding-left: 2.8rem;
+                    box-shadow: none;
+                    border-radius: 0px;
+                    position: relative;
+                    z-index: 1;
+                    background-color: transparent;
+                }
+                .placeholder-wrap{
+                    padding: 0 1rem;
+                    @include flex(center, normal);
+                    @include position(absolute, 0, auto, 0, 0);
+                    span{
+                        margin-left: 1rem;
+                        display: inline-flex;
+                        @include font-family($font-main, 1em, #979797, 500, 1);
+                    }
+                    .icon {
+                        margin: auto 0;
+                    }
+                }
+            }
+        }
+        .nav-link{
+            white-space: nowrap;
+            padding: 0 1rem;
+            @include font-family($font-main, 1em, black, 600, 1);
+            @include media-breakpoint-down(sm) { 
+                padding-left: 1rem 0;
+            }
+            &.btn-connect{
+                width: 207px;
+                height: 40px;
+                color: white;
+                transition: all ease .4s;
+                background-color: black;
+                border: 3px solid black;
+                @include flex(center, center);
+                @include media-breakpoint-down(sm) { 
+                   width: 100%;
+                }
+                &:hover{
+                    color: black;
+                    background-color: transparent;
+                }
+            }
+            &.link-indicator{
+                width: 60px;
+                position: relative;
+                .indicator{
+                    @include position(absolute, -10px, 12px, auto, auto);
+                }
+            }
+        }
+        .dropdown{
+            .dropdown-toggle {
+                &::after{
+                    display: none;
+                }
+            }
+            .dropdown-menu{
+                width: 255px;
+                border-radius: 0;
+                border: 1px solid #F2F2F2;
+                position: absolute !important;
+                box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.04);
+                .dropdown-item{
+                    padding: 1rem 1.5rem ;
+                    @include font-family($font-main, 1em, black, 600, 1);
+                    &:nth-child(2){
+                        border-top: 1px solid #F2F2F2;
+                    }
+                    .icon{
+                        margin-right: 1rem;
+                    }
+                    &.drop-header{
+                        padding: 1.5rem 1.5rem  2rem 1.5rem ;
+                        pointer-events: none;
+                        
+                        @include flex(center, space-between);
+                    }
+
+                }
+            }
+        }
+    }
+}

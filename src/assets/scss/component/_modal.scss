@@ -1,0 +1,112 @@
+.modal{
+    .btn-close{
+        border: none;
+        box-shadow: none;
+        width: 60px;
+        z-index: 1;
+        @include position(absolute, 0, 0, auto, auto);
+    }
+
+    &.modal-connect{
+        .modal-dialog{
+            width: 440px;
+            @include media-breakpoint-down(sm) { 
+                width: 100%;
+            }
+            .modal-content{
+                min-height: 335px;
+                border-radius: 0;
+                text-align: center;
+                .modal-body{
+                    width: 100%;
+                    height: 100%;
+                    width: 100%;
+                    padding: 4rem;
+                    position: relative;
+                    @include flex(center, center);
+                    .content{
+                        h4{
+                            margin-top: 3rem;
+                            @include font-family($font-main, 1.5em, #000000, 600, 1); 
+                        }
+                        p{
+                            margin: 1rem 0 0;
+                            @include font-family($font-main, 0.875em, #575757, 400, 1); 
+                        }
+                    }
+                    .btn{
+                        margin: 2rem 0 1rem 0;
+                        position: relative;
+                        .icon{
+                            margin: auto;
+                            @include position(absolute, 0, 1rem, 0, auto);
+                        }
+                    }
+                    .nav-link{
+                        text-decoration: underline;
+                        @include font-family($font-main, 0.875em, black, 500, 1); 
+                    }
+                }
+            }
+        }
+    }
+
+    &.modal-signup{
+        .modal-dialog{
+            width: 440px;
+            @include media-breakpoint-down(sm) { 
+                width: 100%;
+            }
+            .modal-content{
+                border-radius: 0;
+                .modal-body{
+                    .avatar-wrap{
+                        text-align: center;
+                        margin-bottom: 2.5rem;
+                        .figure{
+                            .figure-caption{
+                                @include font-family($font-main, 1.5em, black, 500, 1); 
+                            }
+                        }
+                    }
+                    .ant-form {
+                        .ant-form-item{
+                            position: relative;
+                            .ant-form-item-label{
+                                z-index: 1;
+                                width: 100%;
+                                display: block;
+                                overflow: inherit;
+                                @include position(absolute, -12px, auto, auto, 0);
+                                label{
+                                    padding: 0;
+                                    margin: 0;
+                                    position: static;
+                                    margin-left: 1rem;
+                                    padding: 0.2rem 0.5rem;
+                                    background-color: white;
+                                    @include font-family($font-main, 0.85em, #979797, 600, 1); 
+                                    .ant-form-item-optional{
+                                        margin: 0 auto;
+                                        @include position(absolute, 34px, 1rem, auto, auto);
+                                    }
+                                }
+                            }
+                            .ant-form-item-control{
+                                .ant-form-item-control-input{
+                                    .ant-form-item-control-input-content{
+                                        .ant-input{
+                                            height: 56px;
+                                            padding-right: 5rem;
+                                            border: 1px solid #E3E3E3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}

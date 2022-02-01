@@ -1,0 +1,98 @@
+.ant-list-item{
+    padding: 1rem;
+    @include media-breakpoint-down(xl) { 
+        padding: 1rem 0;
+    }
+    .ant-list-item-meta{
+        align-items: center;
+        .ant-list-item-meta-content{
+            width: auto;
+        }
+        .ant-list-item-meta-title{
+            margin: 0;
+            @include media-breakpoint-down(xl) { 
+                font-size: 12px;
+            }
+        }
+        .ant-list-item-meta-description{
+            font-size: 0.85em;
+        }
+        .ant-avatar{
+            width: 63px;
+            height: 56px;
+        }
+
+     }
+     .btn-link{
+        padding: 0.2rem;
+    }
+}
+
+.follow-box{
+    border: 1px solid #F2F2F2;
+    @include media-breakpoint-down(md) { 
+        margin-bottom: 1rem;
+     }
+    .ant-list-item{
+        padding: 2rem;
+        @include media-breakpoint-down(xl) { 
+           flex-direction: column;
+        }
+        .ant-list-item-meta{
+            @include media-breakpoint-down(xl) { 
+                flex-direction: column;
+             }
+             .ant-list-item-meta-avatar{
+                 margin: 0;
+             }
+             .ant-list-item-meta-content{
+                 text-align: center;
+                 margin-bottom: 1rem;
+             }
+        }
+        .ant-list-item-meta-description{
+            @include font-family($font-main, 1em, #000000, 400, 1); 
+        }
+    }
+    .social-box{
+        border-top: 1px solid #F2F2F2;
+        padding: 2rem;
+        .navbar {
+            @include flex(center, space-between);
+            @include media-breakpoint-down(xl) { 
+                flex-direction: column;
+            }
+        }
+        .navbar-nav{
+            @include flex(center, normal);
+            @include media-breakpoint-down(xl) { 
+                width: 100%;
+            }
+            .btn-primary{
+                width: 144px;
+                height: 40px;
+                @include media-breakpoint-down(xl) { 
+                    width: 100%;
+                }
+            }
+            .nav-link{
+                line-height: 2px;
+                @include font-family($font-main, 1em, #000000, 500, 1); 
+                .icon{
+                    margin-right: 0.5rem;
+                }
+                @include media-breakpoint-down(xl) { 
+                    &:first-child{
+                        padding-left: 0;
+                    }
+                }
+            }
+            .nav-item{
+                margin-right: 1rem;
+                @include media-breakpoint-down(xl) { 
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
